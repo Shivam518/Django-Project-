@@ -1,0 +1,64 @@
+{% extends 'studentsection/base.html' %}
+{%block content %}
+
+<center>
+	<h1> Search Data </h1>
+	<a href="Add"> To Add New Data </a>
+	<a href="display"> To Show Data </a>
+	<br>
+	<br>
+	<br>
+
+<form method='post'>
+	{% csrf_token %}
+	<br>
+	<br>
+	<br>
+Search Data By Name : <input type='text' name='name'>
+<br>
+	<br>
+	<br>
+	<input type='submit' name='search' value='Search'>
+<br>
+	<br>
+	<br>
+<table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Name </th>
+        <th>Roll Number </th>
+        <th>Email Id </th>
+        <th>College </th>
+        <th>Passout Year </th>
+        <th>Course Name </th>
+        <th>Course Fees </th>
+        <th> Location </th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in data %}
+      <tr>
+        <td>{{i.Name}}</td>
+        <td>{{i.Roll_Number}}</td>
+        <td>{{i.Email}}</td>
+        <td>{{i.College}}</td>
+        <td>{{i.passedout_year}}</td>
+        <td>{{i.course_name}}</td>
+        <td>{{i.course_fee}}</td>
+        <td>{{i.Institute_area}}</td>
+      </tr>
+      {%endfor%}
+  </tbody>
+</table>
+</form>
+</center>
+{% endblock %}
+
+
+
+
+
+
+
+
+

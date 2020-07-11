@@ -1,0 +1,36 @@
+{% extends 'studentsection/base1.html' %}
+ {% block content %}
+
+ <h1 style='text-align:center;'> Register Here  </h1>
+
+
+<div class="container">
+  
+   <form method="post">
+
+    {% csrf_token %}
+
+    <div class="form-group">
+      <label for="user">Username:</label>
+      <input type="text" class="form-control" id="user" placeholder="Enter username" name="uname">
+    </div>
+    <div class="form-group">
+      <label for="email">Email Id :</label>
+      <input type="mail" class="form-control" id="mail" placeholder="Enter Email Id " name="email">
+    </div>
+
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pswd" placeholder="Enter password" name="pswd">
+    </div>
+
+    
+
+   
+    <input type="submit" name='sub'class="btn btn-primary" value='Register'>
+  </form>
+</div>
+
+
+
+ {% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'studentsection/base.html' %}
+{%block content %}
+
+{% load static %}
+
+<div class="container">
+
+	<h1 style='text-align:center;'> Our Campus In Diffrent City </h1>
+	 <h1>{{msg}}</h1>
+	
+
+<div>
+
+             
+  <img src="{% static 'studentsection/Images/camp1.jpg' %}" class="rounded-circle" class="float-left" alt="Campus 1 " width="300" height="236"> 
+  <img src="{% static 'studentsection/Images/camp2.jpg'%}" class="rounded-circle" class="float-center" alt="Campus 2" width="300" height="236"> 
+  <img src="{% static 'studentsection/Images/camp3.jpg '%}" class="rounded-circle" class="float-right" alt="Campus 3" width="300" height="236"> 
+ 
+
+</div>
+<br>
+
+
+<div>
+
+	<img src="{% static 'studentsection/Images/camp4.jpg' %}" class="rounded-circle" class="float-left" alt="Campus 1 " width="300" height="236"> 
+  <img src="{% static 'studentsection/Images/camp5.jpg'%}" class="rounded-circle" class="float-center" alt="Campus 2" width="300" height="236"> 
+  <img src="{% static 'studentsection/Images/camp6.jpg '%}" class="rounded-circle" class="float-right" alt="Campus 3" width="300" height="236"> 
+
+</div>
+
+</div>
+
+
+
+
+
+{% endblock %}

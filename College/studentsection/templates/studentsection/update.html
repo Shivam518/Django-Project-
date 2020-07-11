@@ -1,0 +1,38 @@
+ {% extends 'studentsection/base.html' %}
+ {% block content %} 
+
+ <h1 style='color:white; text-align:center; text-shadow:3px 3px 5px black; '> Enter For Update !!!!!!!!!!!!</h1>
+
+<form method='post'>
+	{% csrf_token %}
+	<center>
+		Name : <input type='text' name='name' value='{{data.Name}}'>
+		<br>
+		<br>
+		Roll Number : <input type='text' name='roll' value='{{data.Roll_Number}}'>
+		<br>
+		<br>
+		Email Id : <input type='mail' name='email' value='{{data.Email}}'>
+		<br>
+		<br>
+		College : <input type='text' name='college' value='{{data.College}}'>
+		<br>
+		<br>
+		Pass out Year : <input type='text' name='pass' value='{{data.passedout_year}}'>
+		<br>
+		<br>
+		Course Name : <input type='text' name='course' value='{{data.course_name}}'>
+		<br>
+		<br>
+		Course Fees : <input type='text' name='fee' value='{{data.course_fee}}'>
+		<br>
+		<br>
+		Location : <input type='text' name='location' value='{{data.Institute_area}}'>
+		<br>
+		<br>
+		<input type='submit' name='submit'  value='Update'>
+
+	</center>
+</form>
+
+​  {% endblock %}
